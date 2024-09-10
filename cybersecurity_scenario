@@ -1,0 +1,62 @@
+Cybersecurity Scenario Assessment
+Objective
+Assess the candidate's understanding of security operations, cyber defense, threat intelligence, and incident response.
+
+Scenario
+You are a security analyst at a financial company. Recently, your organization experienced a security breach. The attack vector was an unpatched vulnerability in a web application that allowed attackers to gain unauthorized access to the network.
+
+Tasks
+1. Threat Intelligence Report (10 points)
+List the types of attack that could be used.
+Explain how a vulnerability exploited can provide access to the network.
+Suggest preventive measures to avoid similar incidents in the future.
+2. Incident Response Plan (10 points)
+Outline an incident response plan to address the breach.
+Include steps for containment, eradication, and recovery.
+3. Network Security Measures (10 points)
+Recommend network security measures to enhance the organization's defense posture.
+Include at least three different security technologies or practices (e.g., IDS/IPS, firewalls, network segmentation).
+Note: For Part 1, assume you have access to the cloud provider security tools/services available like Azure Defender or AWS Security hub.
+
+Answer
+1. Threat Intelligence Report
+a. Types of attacks that could be used:
+Remote Code Execution: The vulnerability might have allowed the attackers to run arbitrary code on the web server, thus allowing them to take control over the system.
+Authentication Bypass: The attackers might have found a way to go around authentication mechanisms and gain access to protected areas of the application.
+File Inclusion: The attackers might have been able to include their own malicious files from remote servers or local file system.
+If the attack allowed unauthorized network access, the above are possible reasons, but a thorough investigation is needed to determine the exact nature of the vulnerability used.
+
+Depending on the Public Cloud service provider we use, we could also use some of the provided tools like AWS Security Hub or Azure Security Center. In this case, we'll focus on AWS Security Hub, as we use AWS as our Cloud provider. AWS Security Hub provides a great view into our AWS environment and its security state. We can set up automatic remediation and implement actions, and also integrate and import findings into third-party tools like Prisma Cloud or Splunk to further utilize the data, set up automatic notifications, and continuous monitoring.
+
+b. How a vulnerability can provide access to the network:
+Attackers usually search for weaknesses in web applications, operating systems, or network devices. Unpatched or misconfigured software is one of the most common vulnerabilities that attackers use to hack. Once they identify the vulnerability, hackers use it to gain initial access. This could involve injecting malicious code (e.g., SQL injection), bypassing authentication mechanisms, or executing arbitrary commands on a system. Once they gain initial access and establish presence on the system, they can work on creating backdoors, installing malware, or obtaining valid credentials to use.
+
+c. Preventive measures:
+Vulnerability Scanning: Use tools like Sonarqube to ensure the code that is deployed does not have serious vulnerabilities.
+Patches and Updates: Implement a sound patch management process to ensure all software is updated regularly with the latest security updates and patches.
+Web Application Firewalls: Use services like AWS Shield or WAF.
+Security Coding and Deployment Practices: Every Pull Request must be reviewed and approved before being deployed.
+2. Incident Response Plan
+Every incident entails certain procedures like investigation, detection, containment, eradication, communication/reports, and recovery. There should be a dedicated Incident Response Team that investigates all incidents. Once they investigate and establish vulnerability(ies), they come up with plans, procedures, and guidelines to implement.
+
+In this specific case:
+
+Identify and investigate the vulnerability
+Implement immediate threat mitigation measures
+Work closely with affected parties
+Determine the root cause of the incident
+Analyze the extent of the breach
+Remove the threat from affected systems
+Repair affected systems and services
+Communicate the breach to all key stakeholders
+Conduct thorough lessons learned
+Create algorithms and set guidelines to prevent recurrence
+Implement regular testing and maintenance
+3. Network Security Measures
+Strong Access Controls: Follow the principle of least privilege to ensure all users and systems have access only to what they need. Regularly review and update access permissions. For applications, avoid using service accounts, which means managing access and secret keys. Instead, use dynamic authentication tools like Hashicorp Vault or, at least, AWS IAM/Azure AD roles with role binding.
+
+Network Segmentation: Isolate critical systems and limit impact by segmenting networks.
+
+Robust Firewalls and Advanced Threat Protection: Implement and configure monitoring and alerts for immediate detection and response.
+
+Data Encryption: Encrypt data both at rest and in transit, and exchange it using HTTPS protocol. Never run your application over HTTP.
