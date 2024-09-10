@@ -1,18 +1,26 @@
-1. Threat Intelligence Report
+Threat Intelligence Report
 
 a. Types of attacks that could be used:
-**Remote Code Execution:** The vulnerability might have allowed the attackers to run arbitrary code on the web server, thus allowing them to take control over the system.
-**Authentication Bypass:** The attackers might have found a way to go around authentication mechanisms and gain access to protected areas of the application.
-**File Inclusion:** The attackers might have been able to include their own malicious files from remote servers or local file system.
+### Remote Code Execution: The vulnerability might have allowed the attackers to run arbitrary code on the web server, thus allowing them to take control over the system.
+### Authentication Bypass: The attackers might have found a way to go around authentication mechanisms and gain access to protected areas of the application.
+### File Inclusion: The attackers might have been able to include their own malicious files from remote servers or local file system.
 If the attack allowed unauthorized network access, the above are possible reasons, but a thorough investigation is needed to determine the exact nature of the vulnerability used.
 
-Depending on the Public Cloud service provider we use, we could also use some of the provided tools like AWS Security Hub or Azure Security Center. In this case, we'll focus on AWS Security Hub, as we use AWS as our Cloud provider. AWS Security Hub provides a great view into our AWS environment and its security state. We can set up automatic remediation and implement actions, and also integrate and import findings into third-party tools like Prisma Cloud or Splunk to further utilize the data, set up automatic notifications, and continuous monitoring.
+Depending on the Public Cloud service provider we use, we could also use some of the provided tools like AWS Security Hub or Azure Security Center.
+In this case, we'll focus on AWS Security Hub, as we use AWS as our Cloud provider. 
+AWS Security Hub provides a great view into our AWS environment and its security state. 
+We can set up automatic remediation and implement actions, and also integrate and import findings 
+into third-party tools like Prisma Cloud or Splunk to further utilize the data, set up automatic notifications, and continuous monitoring.
 
 b. How a vulnerability can provide access to the network:
-Attackers usually search for weaknesses in web applications, operating systems, or network devices. Unpatched or misconfigured software is one of the most common vulnerabilities that attackers use to hack. Once they identify the vulnerability, hackers use it to gain initial access. This could involve injecting malicious code (e.g., SQL injection), bypassing authentication mechanisms, or executing arbitrary commands on a system. Once they gain initial access and establish presence on the system, they can work on creating backdoors, installing malware, or obtaining valid credentials to use.
+### Attackers usually search for weaknesses in web applications, operating systems, or network devices. 
+Unpatched or misconfigured software is one of the most common vulnerabilities that attackers use to hack. 
+Once they identify the vulnerability, hackers use it to gain initial access. This could involve injecting malicious code
+(e.g., SQL injection), bypassing authentication mechanisms, or executing arbitrary commands on a system.
+Once they gain initial access and establish presence on the system, they can work on creating backdoors, installing malware, or obtaining valid credentials to use.
 
 c. Preventive measures:
-**Vulnerability Scanning:** Use tools like Sonarqube to ensure the code that is deployed does not have serious vulnerabilities.
-**Patches and Updates:** Implement a sound patch management process to ensure all software is updated regularly with the latest security updates and patches.
-**Web Application Firewalls:** Use services like AWS Shield or WAF.
-**Security Coding and Deployment Practices:** Every Pull Request must be reviewed and approved before being deployed.
+### Vulnerability Scanning: Use tools like Sonarqube to ensure the code that is deployed does not have serious vulnerabilities.
+### Patches and Updates: Implement a sound patch management process to ensure all software is updated regularly with the latest security updates and patches.
+### Web Application Firewalls: Use services like AWS Shield or WAF.
+### Security Coding and Deployment Practices: Every Pull Request must be reviewed and approved before being deployed.
