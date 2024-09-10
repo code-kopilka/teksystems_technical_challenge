@@ -1,0 +1,40 @@
+name: Deploy Serverless Lambda Function
+
+on:
+  push:
+    branches: 
+      - dev \
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: us-east-1
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Create deployment package
+        run: zip -r serverless_app.zip .
+
+      - name: Deploy Lambda function
+        uses: aws-actions/aws-lambda@v1
+        with:
+          command: deploy
+          function-name: serverless_app
+          package-type: zip
+          code: serverless_app.zip
