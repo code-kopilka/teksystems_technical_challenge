@@ -1,0 +1,17 @@
+Every incident entails certain procedures like investigation, detection, containment, eradication, communication/reports, and recovery. 
+There should be a dedicated Incident Response Team that investigates all incidents.
+Once they investigate and establish vulnerability(ies), they come up with plans, procedures, and guidelines to implement.
+
+In this specific case:
+
+-- Identify and investigate the vulnerability
+-- Implement immediate threat mitigation measures
+-- Work closely with affected parties
+-- Determine the root cause of the incident
+-- Analyze the extent of the breach
+-- Remove the threat from affected systems
+-- Repair affected systems and services
+-- Communicate the breach to all key stakeholders
+-- Conduct thorough lessons learned
+-- Create algorithms and set guidelines to prevent recurrence
+-- Implement regular testing and maintenance
