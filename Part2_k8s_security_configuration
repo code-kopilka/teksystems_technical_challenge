@@ -1,5 +1,12 @@
-There are a lot of ways to create and secure your Kubernetes environments from unauthorized access, data breaches and other attackers. I am listing some of the keys ones below:
+There are a lot of ways to create and secure your Kubernetes environments from unauthorized access, data breaches and other attackers.
 
-a. Network Policies - these act as a firewall for pod to pod communicatoon, thus allowing you to control traffic flow betwern pods and network endpoints.
-b. RBAC - role based access controls - this allows Kubernetes admins to dynamically configure access policies based on least privilege best practices.
-c. Pod security policies - these help defind a set of conditions that pods must meet to be accepted into the pool. These allows k8s admins to enforce security best practices across the cluster.
+I am listing some of the keys ones below:
+
+a. Network Policies - these act as a firewall for pod to pod communicatoon,
+thus allowing you to control traffic flow betwern pods and network endpoints.
+
+b. RBAC - role based access controls - this allows Kubernetes admins to dynamically
+configure access policies based on least privilege best practices.
+
+c. Pod security policies - these help defind a set of conditions that pods must meet to be 
+accepted into the pool. These allows k8s admins to enforce security best practices across the cluster.
