@@ -1,6 +1,6 @@
-Every incident entails certain procedures like investigation, detection, containment, eradication, communication/reports, and recovery. 
-There should be a dedicated Incident Response Team that investigates all incidents.
-Once they investigate and establish vulnerability(ies), they come up with plans, procedures, and guidelines to implement.
+# Every incident entails certain procedures like investigation, detection, containment, eradication, communication/reports, and recovery. 
+# There should be a dedicated Incident Response Team that investigates all incidents.
+# Once they investigate and establish vulnerability(ies), they come up with plans, procedures, and guidelines to implement.
 
 In this specific case:
 
