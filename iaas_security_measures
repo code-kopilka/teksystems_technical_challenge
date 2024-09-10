@@ -1,0 +1,13 @@
+Infrastructure as a Service is a cloud computing model that provudes virtualized computing resources over the internet, like compute, storage and networking on a pay-as-you-go basis. E.g. AWS, GCP, Azure etc. 
+
+This gives you ability to elastically scale up and down based on your application's needs and demand, thus eliminating the need for upfront hardware investments and maintenance costs. 
+
+This also gives you flexibility to have more control over your infrastructure than other cloud models.
+
+With IaaS model, you get many benefits as well as unique security challenges. In this model, you share the responsibility with the provider.
+
+The provider (e.g. AWS) secures the underlying infrastructure, while you are responsible for securing your applications, data and access management. 
+
+This division of responsibilities can lead to security gapss if not properly managed and monitored.
+
+To mitigate these risks, organizations should consider strong access control, regular audit and review, robust backup, encryption of sensitive data and stay up-to-date on latest security threats and vulnerabilities specigic to IaaS environments.
