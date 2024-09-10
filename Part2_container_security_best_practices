@@ -1,13 +1,22 @@
-Docker Security Best Practices (10 points)
+Docker Security Best Practices
 
 List and explain five Docker security best practices:
 
--- Always use trusted base images, e.g. official and verified images. This helps you to ensuure you are starting with a secure foundation. Regularly update these base images to get the latest security patches and updates.
+-- Always use trusted base images, e.g. official and verified images. 
+   This helps you to ensuure you are starting with a secure foundation.
+   Regularly update these base images to get the latest security patches and updates.
 
--- Scan docker iamges for vulnerabilities. Build a image building pipeline using Packer that uses a trusted image from official sources, scans for vulnerabilities, implements patches, installs all your tools and fixes critical vulnerabilities before deploying.
+-- Scan docker iamges for vulnerabilities. 
+  Build a image building pipeline using Packer that uses a trusted image from official
+  sources, scans for vulnerabilities, implements patches, installs all your tools and fixes critical vulnerabilities before deploying.
 
--- Run docker containers as non-root users. Never run containers with root privileges, instead create a dedicated user in your Dockerfile that uses the USER instruction to switch to non-root user.
+-- Run docker containers as non-root users. 
+   Never run containers with root privileges, instead create a dedicated user in your Dockerfile that
+   uses the USER instruction to switch to non-root user.
 
--- Enable docker content trust. This ensures the integratity and publisher of container images by verifying authenticity of images before pulling and running them.
+-- Enable docker content trust. 
+   This ensures the integratity and publisher of container images by verifying authenticity of images before pulling and running them.
 
--- Limit container capabilities and resources. Restrict container privileges and access to the system resources. You could also set resource limits on CPU, memory and storage to prevent DDOS attacks.
+-- Limit container capabilities and resources. 
+   Restrict container privileges and access to the system resources. You could also set resource limits on
+   CPU, memory and storage to prevent DDOS attacks.
