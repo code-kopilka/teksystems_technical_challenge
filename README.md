@@ -7,7 +7,7 @@ This project consists of three main parts, each focusing on different aspects of
 
 ## Part 1: Cybersecurity Scenario
 
-In this section, we explore a specific cybersecurity scenario, identifying potential threats and vulnerabilities.
+In this section, we explore a specific cybersecurity incident scenario, identifying potential threats and vulnerabilities.
 
 ## Part 2: Container Security Implementation
 
