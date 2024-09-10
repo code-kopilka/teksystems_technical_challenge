@@ -1,0 +1,44 @@
+---
+- name: Deploy Apache Web Server
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Ensure Apache is running
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Create custom index.html
+      copy:
+        content: |
+          <html>
+          <body>
+            <h1>Welcome to my web server!</h1>
+            <p>This server was deployed using Ansible.</p>
+          </body>
+          </html>
+        dest: /var/www/html/index.html
+
+    - name: Set proper permissions for web content
+      file:
+        path: /var/www/html
+        owner: www-data
+        group: www-data
+        mode: '0755'
+        recurse: yes
+
+    - name: Open firewall for HTTPS traffic
+      ufw:
+        rule: allow
+        port: '443'
+        proto: tcp
