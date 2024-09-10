@@ -1,9 +1,9 @@
-Strong Access Controls: Follow the principle of least privilege to ensure all users and systems have access only to what they need.
+### Strong Access Controls: Follow the principle of least privilege to ensure all users and systems have access only to what they need.
 Regularly review and update access permissions. For applications, avoid using service accounts, which means managing access and secret keys. 
 Instead, use dynamic authentication tools like Hashicorp Vault or, at least, AWS IAM/Azure AD roles with role binding.
 
-**Network Segmentation:** Isolate critical systems and limit impact by segmenting networks.
+### Network Segmentation: Isolate critical systems and limit impact by segmenting networks.
 
-**Robust Firewalls and Advanced Threat Protection:** Implement and configure monitoring and alerts for immediate detection and response.
+### Robust Firewalls and Advanced Threat Protection: Implement and configure monitoring and alerts for immediate detection and response.
 
-**Data Encryption:** Encrypt data both at rest and in transit, and exchange it using HTTPS protocol. Never run your application over HTTP.
+### Data Encryption: Encrypt data both at rest and in transit, and exchange it using HTTPS protocol. Never run your application over HTTP.
